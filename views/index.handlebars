@@ -1,11 +1,20 @@
 <h1>BURGERS!!!</h1>
 
+<ol class="breadcrumb">
+  <li class="breadcrumb-item active">Home</li>
+</ol>
+<ol class="breadcrumb">
+  <li class="breadcrumb-item"><a href="#">Home</a></li>
+  <li class="breadcrumb-item active">Library</li>
+</ol>
+
+
 <h2>BURGERS 4 U 2 EAT</h2>
 
-<ul>
+<ul class="breadcrumb">
     {{#each burgers}}
       {{#unless devoured}}
-        {{this.id}}. {{this.burger_name}}
+       <li class="breadcrumb-item active" >{{this.id}}. {{this.burger_name}} </li>
         {{/unless}}
         {{/each}}
 </ul>
@@ -33,7 +42,7 @@
     <br>
     <input type="radio" name="devoured" value="1" checked>Devoured!
     <br>
-    <input type="radio" name="devoured" value="0"> Hot Burgers!
+    <input type="radio" name="devoured" value="0"> Burgers 4 u 2 eat!
 </div>
 
 <button type="submit">Add a Burger</button>
