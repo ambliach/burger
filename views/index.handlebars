@@ -1,12 +1,6 @@
 <h1>BURGERS!!!</h1>
 
-<ol class="breadcrumb">
-  <li class="breadcrumb-item active">Home</li>
-</ol>
-<ol class="breadcrumb">
-  <li class="breadcrumb-item"><a href="#">Home</a></li>
-  <li class="breadcrumb-item active">Library</li>
-</ol>
+
 
 
 <h2>BURGERS 4 U 2 EAT</h2>
@@ -21,10 +15,10 @@
 
 <h2>BURGERS U ATE ALREADY!</h2>
 
-<ul>
+<ul class="breadcrumb">
 {{#each burgers}}
 {{#if devoured}}
-{{this.id}}. {{this.burger_name}}
+<li class="breadcrumb-item active">{{this.id}}. {{this.burger_name}}</li>
 {{/if}}
 {{/each}}
 </ul>
