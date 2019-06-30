@@ -7,7 +7,7 @@
 
 <ul class="breadcrumb">
     {{#each burgers}}
-      {{#unless devoured}}
+      {{#unless this.devoured}}
        <li class="breadcrumb-item active" >{{this.id}}. {{this.burger_name}} </li>
         {{/unless}}
         {{/each}}
@@ -24,21 +24,12 @@
 </ul>
 
 <h2>Create a burga!</h2>
-<form class="create-form">
-
-    <div class= "form-group">
-        <label for="newBurg">Burger name:</label>
-        <input type="text" id="newBurg" name="name">
-    </div>
-<div class="form-group">
-    <label for="devoured">Devoured?</label>
-    
-    <br>
-    <input type="radio" name="devoured" value="1" checked>Devoured!
-    <br>
-    <input type="radio" name="devoured" value="0"> Burgers 4 u 2 eat!
+<div class="row">
+<div class="col-12 text-center">
+  <h2 class="text-white">Order A Tasty Burger!</h2>
+    <form action="/" method="POST">
+      <input type="text" id="name" name="burger_name" placeholder="Tasty Burger Name Here">
+      <button type="submit" class="btn btn-info">Order The Burger</button>
+    </form>
+  </div>
 </div>
-
-<button type="submit">Add a Burger</button>
-
-</form>
